@@ -167,7 +167,7 @@ int QPinnableTabWidget::getLastPinnedTabIndex() const
 
 void QPinnableTabWidget::mouseReleaseEvent(QMouseEvent *event)
 {
-   if (event->button() == Qt::RightButton && mPrepareMenu && tabBar()->rect().contains(event->pos()))
+   if (event->button() == Qt::RightButton && mPrepareMenu && tabBar()->geometry().contains(event->pos()))
    {
       showContextMenu();
    }
